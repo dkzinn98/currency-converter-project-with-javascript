@@ -1,0 +1,187 @@
+* { /*todo o css terá esse padrão a não ser que mude em códigos abaixo (cascata) */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.background-video video {
+    object-fit: cover; /* Faz o vídeo cobrir toda a tela sem distorção */
+    width: 100%;
+    height: 100%;
+
+}
+
+.logo {
+    width: 194px;
+    display: block;
+    margin: -10px 620px;
+    opacity: 30%;
+    animation: PrumLadoProOutro 2s ease-in-out infinite; /* A animação vai durar 2s, com transição suave, repetindo indefinidamente */
+}
+
+@keyframes PrumLadoProOutro {
+    0% {
+        transform: translateX(0); /* Começa na posição original */
+    }
+    50% {
+        transform: translateX(100px); /* Move 100px para a direita */
+    }
+    100% {
+        transform: translateX(0); /* Volta à posição original */
+    }
+}
+
+#brasil {
+    width: 44px;
+    height: 44px;
+}
+
+#eua {
+    width: 44px;
+    height: 44px;
+    margin-top: 10px;
+}
+
+main {
+    width: 325px;
+    border-radius: 23px;
+    background: #F4F4F4;
+    margin: 0 auto 0;
+    padding: 15px 14px 11px; /* 1° em cima - 2° dos lados - 3° baixo */
+    transition: transform 0.3s ease; /* Transição suave para o efeito */
+    z-index: 1;
+    position: relative; /* Garante que o conteúdo ficará acima do vídeo */
+}
+
+main:hover {
+    animation: shake 0.4s linear; /* Aplica a animação ao passar o mouse */
+}
+
+/* Definição da animação */
+@keyframes shake {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(-5px, -5px); }
+    50% { transform: translate(5px, 5px); }
+    75% { transform: translate(-5px, 5px); }
+    100% { transform: translate(0, 0); }
+}
+
+
+label {
+    color: #777;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+select {
+    color: #555;
+    border-radius: 7px;
+    border: 1px solid #BBB;
+    background: #FFF;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 8px;
+    padding-left: 11px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer; /* aparece a mãozinha quando passo em cima do button */
+
+}
+
+input {
+    font-size: 15px;
+    font-weight: 500;
+    width: 100%;
+    height: 50px;
+    border-radius: 14px;
+    border: 1px solid #BBB;
+    background: #FFF;
+    margin-bottom: 12px;
+    padding-left: 11px;
+    color: #555;
+    cursor: text; /* aparece o i-beam ou cursor de texto quando passo em cima da caixa de texto digitavel */
+}
+
+button {
+    border-radius: 9px;
+    background: linear-gradient(to right, #0C4A94, #010625); /* Gradiente */
+    border: none;
+    width: 100%;
+    height: 33px;
+    color: white;
+    cursor: pointer; /* aparece a mãozinha quando passo em cima do button */
+    transition: transform 0.003s ease;
+    font-family: "Caveat", serif;
+    font-size: 20px;
+
+}
+
+button:active {
+    transform: translateY(7px); /* Faz o botão descer */
+}
+
+button:hover {  /* opacidade abaixa quando passo o mouse em cima */
+    opacity: 0.6;
+}
+
+button:active {  /* opacidade abaixa quando clico em cima */
+    opacity: 0.4;
+}
+
+section {
+    border-radius: 20px;
+    border: 3px solid rgb(0, 71, 177);
+    width: auto;
+    height: 242px;
+    margin-top: 10px;
+    padding: 3px;
+    /* posicionando itens dentro da section */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arrow-img {
+    margin: 7px 0 auto;
+    width: 28px;
+    height: 26px;
+}
+
+.currency-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.currency {
+    color: gray;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.currency-value, .currency-value-to-convert {
+    color: #010625;
+    background-color: azure;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+#dolar-value-text {
+    color: #0465CC;
+    background-color: azure;
+    font-weight: 700;
+    font-size: 20px;
+}
+
